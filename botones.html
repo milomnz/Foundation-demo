@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation UI - Componente Botones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  </head>
+  <body>
+
+    <div class="grid-container" style="margin-top: 3rem;">
+      <h2>Catálogo de Botones en Foundation</h2>
+      <p class="lead">Muestra de la sintaxis basada en la clase base <code>.button</code> y modificadores visuales.</p>
+      <hr>
+
+      <div style="margin-bottom: 2rem;">
+        <h5>1. Clases de Color (Estados del Sistema)</h5>
+        <button type="button" class="button primary">Primary</button>
+        <button type="button" class="button secondary">Secondary</button>
+        <button type="button" class="button success">Success</button>
+        <button type="button" class="button alert">Alert</button>
+        <button type="button" class="button warning">Warning</button>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h5>2. Tamaños Disponibles</h5>
+        <button type="button" class="button tiny">Tiny</button>
+        <button type="button" class="button small">Small</button>
+        <button type="button" class="button">Default</button>
+        <button type="button" class="button large">Large</button>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h5>3. Modificadores de Estilo Avanzados</h5>
+        <button type="button" class="button hollow primary">Hollow Primary</button>
+        <button type="button" class="button hollow alert">Hollow Alert</button>
+        
+        <button type="button" class="button expanded success" style="margin-top: 1rem;">Botón Expandido (Full Width)</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(document).foundation();
+      });
+    </script>
+  </body>
+</html>

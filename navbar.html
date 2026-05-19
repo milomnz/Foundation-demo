@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation UI - Componente Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  </head>
+  <body>
+
+    <div class="top-bar" id="responsive-menu" style="background-color: #1779ba;">
+      
+      <div class="top-bar-left">
+        <ul class="menu" style="background-color: transparent;">
+          <li class="menu-text" style="color: white; font-weight: bold;">Hospitalito Core</li>
+          <li><a href="#" style="color: white;">Dashboard</a></li>
+          <li><a href="#" style="color: white;">Pacientes</a></li>
+          <li><a href="#" style="color: white;">Médicos</a></li>
+        </ul>
+      </div>
+      
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Buscar historial..."></li>
+          <li><button type="button" class="button primary inverted" style="margin-left: 5px;">Buscar</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="grid-container" style="margin-top: 2rem;">
+      <div class="callout primary">
+        <h5>Módulo de Navegación (Top Bar)</h5>
+        <p>Este archivo demuestra cómo Foundation separa de manera limpia los flujos de elementos usando <code>.top-bar-left</code> y <code>.top-bar-right</code> bajo un esquema Flexbox nativo.</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(document).foundation();
+      });
+    </script>
+  </body>
+</html>
