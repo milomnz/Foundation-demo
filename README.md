@@ -17,14 +17,10 @@ El proyecto está estructurado con un enfoque didáctico tipo "Página Viva" (Li
 
 - **`index.html`**: Es el núcleo del proyecto. Contiene la implementación práctica de múltiples componentes (navbar, tipografía, tarjetas, formularios y botones), unificados en una sola vista con una explicación teórica al lado de cada implementación.
 - **`css/foundation.css`**: Archivo base del framework Foundation.
-- **`css/app.css`**: Archivo para tus hojas de estilo en cascada personalizadas. En esta demo se utiliza para cargar y aplicar globalmente la tipografía *Outfit* desde Google Fonts, la cual Foundation hereda de manera inteligente en todos sus submódulos.
+- **`css/app.css`**: Archivo para las hojas de estilo en cascada personalizadas. Esta demo se utiliza para cargar y aplicar globalmente la tipografía *Outfit* desde Google Fonts, la cual Foundation hereda de manera inteligente en todos sus submódulos.
 - **`js/vendor/` y `js/app.js`**: Dependencias JavaScript (incluyendo jQuery y el core de Foundation) para inicializar componentes interactivos como la Top Bar, modales y acordeones.
-- **`botones.html`**: Archivo originario de las pruebas de botones (cuyo contenido ha sido portado e integrado al `index.html` general).
 
 ## Conceptos Teóricos Claves de Foundation
-
-A continuación se destacan los principios de diseño y uso del framework aplicados en esta demostración:
-
 ### 1. Sistema de Grid (XY Grid)
 El corazón estructural de Foundation es su **XY Grid**, un motor de cuadrículas construido íntegramente sobre Flexbox.
 - Se utilizan las clases `.grid-x` (para controlar el flujo horizontal o las filas) y `.cell` (para definir las columnas).
