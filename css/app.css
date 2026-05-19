@@ -1,0 +1,11 @@
+/* Archivo CSS personalizado para sobreescribir Foundation */
+
+body, h1, h2, h3, h4, h5, h6, input, button, select, textarea {
+  font-family: 'Outfit', sans-serif !important;
+}
+
+/* Opcional: Un pequeño ajuste para asegurar que todo luzca limpio y moderno */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

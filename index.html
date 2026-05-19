@@ -1,171 +1,247 @@
-
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation for Sites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
 <body>
 
-    <div class="grid-container">
+  <!-- Navbar (Top Bar) desde navbar.html -->
+  <div class="top-bar" id="responsive-menu" style="background-color: #1779ba;">
+    <div class="top-bar-left">
+      <ul class="menu" style="background-color: transparent;">
+        <li class="menu-text" style="color: white; font-weight: bold;">Grupo 4. Foundation CSS</li>
+        <li><a href="#" style="color: white;">Juan Camilo</a></li>
+        <li><a href="#" style="color: white;">Santiago Bonilla</a></li>
+        <li><a href="#" style="color: white;">Camila Mendez</a></li>
+      </ul>
+    </div>
+    
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Buscar historial..."></li>
+        <li><button type="button" class="button primary inverted" style="margin-left: 5px;">Buscar</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container" style="margin-top: 2rem;">
+    <div class="callout primary">
+      <h5>Módulo de Navegación (Top Bar)</h5>
+      <p>Este bloque demuestra cómo Foundation separa de manera limpia los flujos de elementos usando <code>.top-bar-left</code> y <code>.top-bar-right</code> bajo un esquema Flexbox nativo.</p>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h1 class="text-center" style="margin-top: 2rem;">Taller Práctico de Foundation</h1>
+
+
+      <div class="callout primary">
+        <h5>¿Cómo maneja Foundation los textos?</h5>
+        <p>Foundation nos permite hacer uso de utilidades tipográficas y configuraciones por defecto que facilitan la
+          lectura:</p>
+        <ul class="no-bullet">
+          <li><strong>Jerarquía automática:</strong> Todos los encabezados (<code>&lt;h1&gt;</code> al
+            <code>&lt;h6&gt;</code>) tienen márgenes y tamaños responsivos ya calculados.</li>
+          <li><strong>Clase <code>.lead</code>:</strong> Como vimos en el párrafo superior, usar esta clase aumenta
+            ligeramente el tamaño de la fuente. Ideal para el primer párrafo de un artículo o subtítulos importantes.
+          </li>
+          <li><strong>Alineación:</strong> Clases como <code>.text-center</code>, <code>.text-left</code> o
+            <code>.text-right</code> te permiten controlar la justificación sin tocar tu CSS.</li>
+          <li><strong>Pesos visuales:</strong> Las clases <code>.stat</code> (para números gigantes en estadísticas) y
+            <code>.subheader</code> (textos ligeramente atenuados y delgados) ayudan a dar variedad visual a la
+            información de forma muy limpia.</li>
+        </ul>
+        <p>Al sobrescribir el <code>font-family</code> en nuestro archivo <code>app.css</code> para el elemento
+          <code>body</code>, Foundation hereda inteligentemente esta nueva fuente en todos sus componentes: botones,
+          tarjetas, etiquetas e inputs de los formularios.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <hr />
+      <h3>Aprende sobre el Componente Card en Foundation</h3>
+      <p>Las <strong>Cards</strong> (tarjetas) son un contenedor flexible y extensible en Foundation, diseñado para
+        agrupar contenido relacionado en una caja visualmente definida. Son componentes muy versátiles para mostrar
+        artículos, productos o perfiles.</p>
+
       <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <h1>Welcome to Foundation</h1>
+        <div class="large-4 medium-6 cell">
+          <!-- El componente Card estilizado -->
+          <div class="card">
+            <div class="card-divider">
+              <h5
+                style="width: 100%; margin-bottom: 0; display: flex; justify-content: space-between; align-items: center;">
+                Curso de Diseño
+                <span class="label success">¡Nuevo!</span>
+              </h5>
+            </div>
+            <img src="https://placehold.co/300x200/1779ba/ffffff?text=Foundation+6" alt="Imagen de ejemplo">
+            <div class="card-section">
+              <h4>Esta es una tarjeta.</h4>
+              <p>Tiene un estilo visual fácil de sobrescribir, y es apropiadamente sutil.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="large-8 medium-6 cell">
+          <h4>¿Cómo funciona la estructura?</h4>
+          <p>El componente se construye ensamblando clases específicas como si fueran bloques de construcción:</p>
+          <ul>
+            <li><code>.card</code>: Es el contenedor principal de la tarjeta. Agrega el borde, fondo y controla que los
+              elementos internos respeten los bordes redondeados (border-radius).</li>
+            <li><code>.card-divider</code>: Se usa como encabezado o pie de tarjeta. Tiene un color de fondo ligeramente
+              distinto para contrastar y separar el contenido.</li>
+            <li><strong>Imágenes:</strong> Las etiquetas <code>&lt;img&gt;</code> colocadas directamente en un
+              <code>.card</code> (fuera de una sección) se extienden inteligentemente de borde a borde.
+            </li>
+            <li><code>.card-section</code>: Es el contenedor para texto, botones y otros elementos. Proporciona el
+              padding (espaciado interior) necesario para que el contenido respire. Puedes tener múltiples
+              <code>.card-section</code> en una sola tarjeta.
+            </li>
+          </ul>
+          <div class="callout primary">
+            <p><strong>Nota responsiva:</strong> Aunque en tu ejemplo propusiste usar
+              <code>style="width: 300px;"</code>, aquí hemos omitido ese ancho fijo y colocado la tarjeta dentro de una
+              columna del grid (<code>large-4 cell</code>). Esta es la <strong>forma recomendada en Foundation</strong>,
+              ya que permite que la tarjeta sea responsiva y se adapte a cualquier tamaño de pantalla de forma fluida.
+            </p>
+          </div>
         </div>
       </div>
+      <hr />
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h3>Aprende sobre Formularios en Foundation</h3>
+      <p>Los formularios en Foundation son increíblemente fáciles de maquetar. Utilizan la misma estructura del grid
+        para alinear los campos y tienen estilos predeterminados limpios que se pueden adaptar rápidamente.</p>
 
       <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <div class="callout">
-            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-            <p>Once you've exhausted the fun in this document, you should check out:</p>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <p><a href="https://get.foundation/sites/docs/">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-              </div>
-              <div class="large-4 medium-4 cell">
-                <p><a href="https://github.com/foundation/foundation-sites/discussions">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 medium-push-2 cell">
-                <p><a href="https://github.com/foundation/foundation-sites">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-              </div>
-              <div class="large-4 medium-4 medium-pull-2 cell">
-                <p><a href="https://twitter.com/FoundationCSS">@FoundationCSS</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-x grid-padding-x">
-        <div class="large-8 medium-8 cell">
-          <h5>Here&rsquo;s your basic grid:</h5>
-          <!-- Grid Example -->
-
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <div class="primary callout">
-                <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-            <div class="large-6 medium-6 cell">
-              <div class="primary callout">
-                <p>Six cell</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-x grid-padding-x">
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-            <div class="large-4 medium-4 small-4 cell">
-              <div class="primary callout">
-                <p>Four cell</p>
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-          <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-          <form>
+        <div class="large-5 medium-6 cell">
+          <!-- Formulario didáctico -->
+          <form class="callout secondary">
             <div class="grid-x grid-padding-x">
               <div class="large-12 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-12.cell" />
+                <label>Nombre de Usuario
+                  <input type="text" placeholder="ej. nombre_123" />
+                </label>
               </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-4.cell" />
+              <div class="large-12 cell">
+                <label>Contraseña
+                  <input type="password" placeholder="Mínimo 8 caracteres" />
+                </label>
+                <p class="help-text">Tu contraseña debe contener letras y números.</p>
               </div>
-              <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
-                <input type="text" placeholder="large-4.cell" />
-              </div>
-              <div class="large-4 medium-4 cell">
+              <div class="large-12 cell">
                 <div class="grid-x">
-                  <label>Input Label</label>
-                  <div class="input-group">
-                    <input type="text" placeholder="small-9.cell" class="input-group-field" />
-                    <span class="input-group-label">.com</span>
+                  <label style="width: 100%; margin-left: 1rem;">Sitio Web Personal</label>
+                  <div class="input-group" style="margin-left: 1rem; width: calc(100% - 2rem);">
+                    <span class="input-group-label">https://</span>
+                    <input class="input-group-field" type="url" placeholder="misitio.com">
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <fieldset>
+                  <legend>Elige tu plan</legend>
+                  <input type="radio" name="plan" value="basico" id="planBasico"><label for="planBasico">Básico</label>
+                  <input type="radio" name="plan" value="pro" id="planPro"><label for="planPro">Pro</label>
+                </fieldset>
+              </div>
+              <div class="large-6 cell">
+                <fieldset>
+                  <legend>Extras</legend>
+                  <input id="newsletter" type="checkbox"><label for="newsletter">Suscribirse al newsletter</label>
+                </fieldset>
+              </div>
               <div class="large-12 cell">
-                <label>Select Box</label>
-                <select>
-                  <option value="husker">Husker</option>
-                  <option value="starbuck">Starbuck</option>
-                  <option value="hotdog">Hot Dog</option>
-                  <option value="apollo">Apollo</option>
-                </select>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-6 medium-6 cell">
-                <label>Choose Your Favorite</label>
-                <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-                <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-              </div>
-              <div class="large-6 medium-6 cell">
-                <label>Check these out</label>
-                <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-                <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-12 cell">
-                <label>Textarea Label</label>
-                <textarea placeholder="small-12.cell"></textarea>
+                <button type="submit" class="button success expanded" style="margin-bottom: 0;">Registrarse</button>
               </div>
             </div>
           </form>
         </div>
 
-        <div class="large-4 medium-4 cell">
-          <h5>Try one of these buttons:</h5>
-          <p><a href="#" class="button">Simple Button</a><br/>
-            <a href="#" class="success button">Success Btn</a><br/>
-            <a href="#" class="alert button">Alert Btn</a><br/>
-            <a href="#" class="secondary button">Secondary Btn</a></p>
-          <div class="callout">
-            <h5>So many components, girl!</h5>
-            <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-            <a href="https://get.foundation/sites/docs/" class="small button">Go to Foundation Docs</a>
-          </div>
+        <div class="large-7 medium-6 cell">
+          <h4>¿Cómo se estructuran los formularios?</h4>
+          <p>Foundation trata de mantener el HTML lo más limpio y semántico posible, evitando sobrecargarte de clases
+            CSS en cada input:</p>
+          <ul>
+            <li><strong>Envoltura con <code>&lt;label&gt;</code>:</strong> Es la forma más recomendada en Foundation.
+              Envuelves el <code>&lt;input&gt;</code> directamente dentro de la etiqueta <code>&lt;label&gt;</code>. El
+              framework aplica estilos a todos los inputs por defecto y se asegura de que queden bien alineados debajo
+              del texto de su etiqueta.</li>
+            <li><strong>El Grid como aliado:</strong> Nota cómo usamos el grid (<code>div class="grid-x"</code> y celdas
+              <code>large-12 cell</code>) dentro del <code>&lt;form&gt;</code>. Así puedes crear formularios de varias
+              columnas muy fácilmente.</li>
+            <li><strong><code>.help-text</code>:</strong> Si necesitas añadir instrucciones debajo de un input (como en
+              la contraseña), agregas un párrafo con esta clase. Lo estiliza sutilmente y reduce sus márgenes.</li>
+            <li><strong><code>.input-group</code>:</strong> Es un contenedor muy útil para adjuntar iconos o texto fijo
+              a un input (como el "https://" de nuestro ejemplo). Consta de un <code>.input-group-label</code> para los
+              anexos fijos y un <code>.input-group-field</code> para el campo editable propiamente tal.</li>
+            <li><strong>Estilo global:</strong> Para que nuestro formulario resalte un poco más visualmente, he envuelto
+              el formulario en un contenedor usando la clase <code>.callout.secondary</code>. Esta clase añade un fondo
+              gris claro, un borde sutil y un poco de espaciado interno automático.</li>
+          </ul>
         </div>
       </div>
+      <hr />
+    </div>
+  </div>
+
+  <!-- Botones desde botones.html -->
+  <div class="grid-container" style="margin-top: 3rem; margin-bottom: 3rem;">
+    <h2>Catálogo de Botones en Foundation</h2>
+    <p class="lead">Muestra de la sintaxis basada en la clase base <code>.button</code> y modificadores visuales.</p>
+    <hr>
+
+    <div style="margin-bottom: 2rem;">
+      <h5>1. Clases de Color (Estados del Sistema)</h5>
+      <button type="button" class="button primary">Primary</button>
+      <button type="button" class="button secondary">Secondary</button>
+      <button type="button" class="button success">Success</button>
+      <button type="button" class="button alert">Alert</button>
+      <button type="button" class="button warning">Warning</button>
     </div>
 
+    <div style="margin-bottom: 2rem;">
+      <h5>2. Tamaños Disponibles</h5>
+      <button type="button" class="button tiny">Tiny</button>
+      <button type="button" class="button small">Small</button>
+      <button type="button" class="button">Default</button>
+      <button type="button" class="button large">Large</button>
+    </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+    <div style="margin-bottom: 2rem;">
+      <h5>3. Modificadores de Estilo Avanzados</h5>
+      <button type="button" class="button hollow primary">Hollow Primary</button>
+      <button type="button" class="button hollow alert">Hollow Alert</button>
+      
+      <button type="button" class="button expanded success" style="margin-top: 1rem;">Botón Expandido (Full Width)</button>
+    </div>
+  </div>
+
+
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
