@@ -14,6 +14,33 @@
 </head>
 
 <body>
+
+  <!-- Navbar (Top Bar) desde navbar.html -->
+  <div class="top-bar" id="responsive-menu" style="background-color: #1779ba;">
+    <div class="top-bar-left">
+      <ul class="menu" style="background-color: transparent;">
+        <li class="menu-text" style="color: white; font-weight: bold;">Grupo 4. Foundation CSS</li>
+        <li><a href="#" style="color: white;">Juan Camilo</a></li>
+        <li><a href="#" style="color: white;">Santiago Bonilla</a></li>
+        <li><a href="#" style="color: white;">Camila Mendez</a></li>
+      </ul>
+    </div>
+    
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Buscar historial..."></li>
+        <li><button type="button" class="button primary inverted" style="margin-left: 5px;">Buscar</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container" style="margin-top: 2rem;">
+    <div class="callout primary">
+      <h5>Módulo de Navegación (Top Bar)</h5>
+      <p>Este bloque demuestra cómo Foundation separa de manera limpia los flujos de elementos usando <code>.top-bar-left</code> y <code>.top-bar-right</code> bajo un esquema Flexbox nativo.</p>
+    </div>
+  </div>
+
   <div class="grid-x grid-padding-x">
     <div class="large-12 cell">
       <h1 class="text-center" style="margin-top: 2rem;">Taller Práctico de Foundation</h1>
@@ -175,6 +202,39 @@
       <hr />
     </div>
   </div>
+
+  <!-- Botones desde botones.html -->
+  <div class="grid-container" style="margin-top: 3rem; margin-bottom: 3rem;">
+    <h2>Catálogo de Botones en Foundation</h2>
+    <p class="lead">Muestra de la sintaxis basada en la clase base <code>.button</code> y modificadores visuales.</p>
+    <hr>
+
+    <div style="margin-bottom: 2rem;">
+      <h5>1. Clases de Color (Estados del Sistema)</h5>
+      <button type="button" class="button primary">Primary</button>
+      <button type="button" class="button secondary">Secondary</button>
+      <button type="button" class="button success">Success</button>
+      <button type="button" class="button alert">Alert</button>
+      <button type="button" class="button warning">Warning</button>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h5>2. Tamaños Disponibles</h5>
+      <button type="button" class="button tiny">Tiny</button>
+      <button type="button" class="button small">Small</button>
+      <button type="button" class="button">Default</button>
+      <button type="button" class="button large">Large</button>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h5>3. Modificadores de Estilo Avanzados</h5>
+      <button type="button" class="button hollow primary">Hollow Primary</button>
+      <button type="button" class="button hollow alert">Hollow Alert</button>
+      
+      <button type="button" class="button expanded success" style="margin-top: 1rem;">Botón Expandido (Full Width)</button>
+    </div>
+  </div>
+
 
 
 
